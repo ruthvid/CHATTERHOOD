@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOCALING</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        #login-form {
+            max-width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        #login-form h2 {
+            text-align: center;
+        }
+        #login-form form {
+            display: flex;
+            flex-direction: column;
+        }
+        #login-form input[type="text"],
+        #login-form input[type="password"],
+        #login-form button {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            font-size: 16px;
+        }
+        #login-form button {
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+        #login-form button:hover {
+            background-color: #0056b3;
+        }
+        #login-message {
+            margin-top: 10px;
+            text-align: center;
+            color: red;
+        }
+        #chat-room {
+            margin-top: 20px;
+            display: none; /* Hidden by default */
+        }
+        #room-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        #room-list li {
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            margin-bottom: 5px;
+            cursor: pointer;
+        }
+        #room-list li:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Chatterhood</h1>
+
+    <div id="login-form">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+        <p id="login-message"></p>
+    </div>
+
+    <div id="chat-room">
+        <h2>Chat Rooms</h2>
+        <ul id="room-list">
+            <!-- Room list will be dynamically updated here -->
+        </ul>
+        <form id="create-room-form">
+            <input type="text" id="create-room-name" placeholder="Room Name" required>
+            <button type="submit">Create Room</button>
+        </form>
+        <p id="create-room-message"></p>
+    </div>
+
+    <script src="renderer.js"></script>
+</body>
+</html>
